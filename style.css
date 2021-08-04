@@ -1,0 +1,307 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1000px;
+  padding: 90px 16px 150px 16px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*　↑↑↑コンテンツ幅を設定するための共通クラス*/
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+}
+
+
+#header {
+  background-image: url(../img/cafe.jpg);
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 20px 40px;
+  position: relative;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.title {
+  text-align: center;
+
+  filter: drop-shadow(1px 1px 2px #121212);
+  position: absolute;
+  padding: 0 16px;
+
+  top: 45%;
+  left:0;
+  right: 0;
+
+
+}
+
+
+.header-menu a {
+  color: #fff;
+  font-size: 20px;
+  filter: drop-shadow(1px 1px 2px #121212);
+  padding-right: 30px;
+  font-weight: bold;
+}
+
+.header-menu li {
+  margin-top: 20px;
+}
+
+.header-menu a:hover {
+  color: #e03131;
+}
+
+.content {
+  display: flex;
+
+}
+
+.sectiontitle {
+  width: 100%;
+  font-size: 4.5rem;
+  color: #fff;
+  text-align: center;
+  filter: drop-shadow(1px 1px 10px #c0c0c0);
+  position: absolute;
+  top: 30%;
+
+
+}
+
+#menu .content1 {
+  width: 50%;
+  padding: 0 45px;
+}
+
+
+#menu .content1:first-child {
+
+
+border-right: solid 1px #000;
+
+}
+
+
+
+h3 {
+  font-size: 2.5rem;
+  border-bottom: solid 6px #e03131;
+  margin-bottom: 70px;
+  display: inline-block;
+}
+
+#menu .menu-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+#menu dt {
+  width: 87%;
+  font-size: 14.4px;
+  border-bottom: 1px dotted #000 ;
+  text-align: left;
+  margin-bottom: 25px;
+
+}
+
+
+#menu dd {
+  width: 13%;
+  font-size: 14.4px;
+  text-align: right;
+  padding-top: 8px;
+}
+
+.fixed-bg {
+  height: 300px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/menu.jpg);
+  position: relative;
+
+}
+
+.other {
+  margin-top: 55px;
+}
+
+
+#menu {
+  margin-top: 20px;
+}
+
+#about ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 19px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+
+#about ul li {
+  width: 50%;
+  word-break: break-word;
+  padding: 19px;
+
+  }
+
+  .buttonBox{
+  margin: 0 20px 40px;
+  position:relative;
+  max-width: 200px;
+  min-width: 150px;
+  flex: 20%;
+}
+
+/*　ボタン　*/
+
+#about .btn {
+  width: 160px;
+  height: 50px;
+  line-height: 3.5;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+
+   display: inline-block;
+
+}
+
+#about .btn span {
+position: relative;
+display: block;
+width: 100%;
+height: 100%;
+
+}
+
+/*
+.btn::before 右の赤線
+.btn::after 下の赤線
+.btn span::before 左の赤線
+.btn span::after 上の赤線
+*/
+
+#about .btn::before,
+#about .btn::after {
+  position: absolute;
+  content: "" ;
+  right : 0;
+  bottom: 0 ;
+  background: #e03131;
+  transition: all 0.3s ease;
+
+}
+
+#about .btn span::before,
+#about .btn span::after {
+  position: absolute;
+  content: "" ;
+  left: 0;
+  top: 0;
+  background: #e03131;
+  transition: all 0.3s ease;
+
+}
+
+#about .btn::before,
+#about .btn span::before {
+  width: 2px;
+  height: 50%;
+}
+
+#about .btn::after,
+#about .btn span::after {
+  width: 20%;
+  height: 2px;
+}
+/*
+ホバー時の縦の動作
+右の赤線と左の赤線の高さを100%にする
+*/
+#about .btn:hover::before,
+#about .btn span:hover::before {
+  height: 100%;
+}
+/*
+ホバー時の横の動作
+下の赤線と上の赤線の横幅を100%にする
+*/
+#about .btn:hover::after,
+#about .btn span:hover::after {
+  width: 100%;
+}
+
+.fixed-bg2 {
+  height: 300px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/location.jpg);
+  position: relative;
+}
+
+.location-map {
+  filter: grayscale(1);
+  margin-bottom: 20px;
+
+
+}
+
+#location .location-map iframe{
+  height: 400px;
+  width: 100%;
+}
+
+.info {
+  text-align: left;
+}
+
+#footer {
+  text-align: center;
+  font-size: 0.5rem;
+  padding: 10px 0;
+}
